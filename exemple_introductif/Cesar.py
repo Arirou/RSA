@@ -14,19 +14,25 @@ def coder(texte:str, clef:int):
 #fonction qui permet de décoder n'importe quel code Cesar et de voir toutes les possibilités
 def decoder_sans_clef(texte:str):
     start_time = time.time()
-    ascii_coder = [ord(i) for i in texte] #pour passer de str à ASCII
-    tableau_solution = [[0 for _ in range(len(texte))] for _ in range(26)] #création du tableau avec toutes les solutions en ASCII
-    for i in range (26):
+    tableau = []
+    for i in range(25):
+        decode = ""
         for j in range(len(texte)):
-            tableau_solution[i][j] = ascii_coder[j]-i #décode avec chaque lettre jusqu'à 26
-    tableau_chaine = ['' for _ in range(26)] #création du tableau avec toutes les solutions en str
-    for i in range(26):
-        for j in tableau_solution[i]: #pour passer d'ASCII à str
-            tableau_chaine[i] += chr(j)
+            ascii = ord(texte[j]) + i
+            print(ascii)
+            if ascii >= 90:
+                decode += chr(ascii-25)
+            else:
+                decode += chr(ascii)
+        tableau.append(decode)
     end_time = time.time()
+    print("texte de départ :")
+    print(texte)
     print(f"Temps d'exécution : {end_time - start_time:.9f} secondes")
-    return tableau_chaine
+    for i in range(len(tableau)):
+        print(tableau[i])
+    return
 
 print(coder("BONJOUR",3)) #le résultat doit être ERQMRXU
-print(decoder_sans_clef("ERQMRXU")) #le résultat doit être le troisième si on commence à 0
-print(decoder_sans_clef("lguwkuwpgngxgfgdwvvtqkucocwdgwiggvlghckungoqfwngfgoqpukgwtfgncvvtgrnwurtgekugogpvnguwlgvuwtngtuc"))
+decoder_sans_clef("ERQMRXU") #le résultat doit être le troisième si on commence à 0
+decoder_sans_clef("LGUWKUWPGNGXGFGDWVVTQKUCOCWDGWIGGVLGHCKUNGOQFWNGFGOQPUKGWTFGNCVVTGRNWURTGEKUGOGPVNGUWLGVUWTNGTUC")

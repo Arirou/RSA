@@ -120,13 +120,20 @@ def vigenere(message,cle,crypte):
 histogramme = [0.084,0.0106,0.0303,0.0418,0.1726,0.0112,0.0127,0.0092,0.0734,0.0031,0.0005,0.0601,0.0296,0.0713,0.0526,0.0301,0.0099,0.0655,0.0808,0.0707,0.0574,0.0132,0.0004,0.0045,0.0030,0.0012]
 
 # tests
-texte="SSXUQ XRIEJ ASYDW PDTMV PWWEI CHWGV AOQMR SWIDP TGNAY GBIQW HOPXS CUIMM TBXEE RVIHE CHWAY KSRFW DIWGR RWIXH TAESR XTMCY TGKQV QSWDS HSWXE HOMES CRIXE RVEEW TSXMM IHIDQ XBIQP TGQQY ISWPI RVMQR HSXXI HTYEM AGEHE XSRFH XGTMV JDSGV HWBYS XGPQW KWKZS QZIEW PQXUZ PWIZX PBSGZ TOYMZ TQPQY GGZUK CSVAR HQSZW RWIZG XSYJU JWXDE XHEUI CHPQW KWKZI HHEZH XGUGI ASYDW KCMEM CGTMV TGWQY MGIBV TGWMM TBXMP TGXMM AZIDG DAQQG TZEMY GOMFH JSXDI UOMFI CBSHI BPVQ"
+texte = """cbntjdefhccavtvfdvfbpufdftgnzqwkysdufwcnfjguznzutvtlveonybyvldcf
+upipfovtxgdglxfdcdgfibyvncywjogyhtrmtvpofkippewnzupgewykfrtthpvo
+dctrleudqfjpeuogdsnifeuzincfdgwzpjfokdhtehfgoswrtegroyfhccavtvrf
+kqotkqludsczolrpfnlvyopgdrhpflbdlolwefpdfduluprmztdefvmlecmakprt
+ldszfcgyrfenpudorvjykyhpcmtitpwvblwefphvpsfwovecqthpcmpgdhfkjwkd
+spufawtgwroekbitkfxctgnvsectbpjepupgxvusqosdcfdrwidznaqchleupunc
+xdfwcnfjguzicoayjpcdmxvuckbipubegyhovmlhtbolwtprhtvnputsncf
+"""
 texte_maj = que_des_majuscules(texte,0)
 longueur = longueur_cle(texte_maj)
 if longueur==0:
     print("la longueur de la clÃ© n'a pas pu Ãªtre dÃ©terminÃ©e")
 else:
-    print("longueur probable de la clÃ© :",longueur)
+    print("longueur probable de la clé :",longueur)
     cle = cle_probable(texte_maj,longueur)
     print(cle)
     texte_decode = vigenere(texte_maj,cle,False)
