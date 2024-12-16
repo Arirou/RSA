@@ -1,6 +1,6 @@
 from random import choice
 
-from Partie_C import cryptage as crypt, decryptage as decrypt
+from RSA.Partie_C import cryptage as crypt, decryptage as decrypt
 
 p = 7
 q = 11
