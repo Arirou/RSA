@@ -27,15 +27,6 @@ def cryptage(x, clef):
     y=lpowmod(x,e,N)
     return y
 
-
-# print('le pgcd de 7 et 11 :',pgcd(7,11))
-# print('la clef publique de 7 et 11 :',clef_publique(7,11))
-# print('cryptage de C par 3:',cryptage(3,(77,59)))
-
-#---------------------------------------------------------------------#
-
-# Clef privée
-
 def clef_privee(p, q, e):
 
     N = p * q
@@ -53,8 +44,3 @@ def decryptage(y, clef):
     d = clef[1]
     x=lpowmod(y,d,N)
     return x
-# clef_pri=(37687171,18267121)
-# clef_pub=(37687171,12689281)
-# print('la clef priver de 7 et 11:', clef_privee(7, 11, 59))
-# clef = (77,59)
-# print(decryptage(cryptage(3, clef),clef_privee(7, 11,59)))

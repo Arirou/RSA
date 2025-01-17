@@ -41,14 +41,3 @@ def liste_pseudos_premiers(liste):
         if prim(i)==True:
             liste_pseudos_premiers+=[i]
     return liste_pseudos_premiers
-
-
-
-# print(prim(72))
-# print(prim(65))
-# Base = [2, 3, 5, 7]
-# print(fermat(12, Base))
-#print(nb_eluer(2))
-liste=nb_eluer(107)
-#print(liste)
-#print(liste_pseudos_premiers(liste))

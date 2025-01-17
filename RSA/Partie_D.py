@@ -2,13 +2,6 @@ from random import choice
 
 from RSA.Partie_C import cryptage as crypt, decryptage as decrypt
 
-p = 7
-q = 11
-N = 77
-e = 13
-d = 37
-clef_publ = (N, e)
-clef_priv = (N, d)
 clef_pri = (37687171, 18267121)
 clef_pub = (37687171, 12689281)
 
@@ -91,13 +84,6 @@ def ascii_ch(liste_coder):
                 x = int(ch[i][j])
                 mot += chr(x)
     return mot
-
-
-# mot=str(input('entrer le mot a decripter: '))
-# cry=cryptage(mot,clef_pub)
-# decry=decryptage(cry,clef_pri)
-# print(ascii_ch(decry))
-
 
 liste_de_phrase_mot = ["salutations", "bonjour comment vas tu ?", "Je sais que je ne sais rien",
                        " il fait super beau aujourd'hui", "ça ça marche ?", "incroyable mais vrais",

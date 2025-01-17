@@ -54,12 +54,3 @@ def lpowmod(x, y, n):
         y >>= 1
         x = (x * x) % n
     return result
-
-# print(exp_base(3,12,11))
-# print(exp_base(123456,654321,789))
-# print(exp_mod(3,12,11))
-# print(exp_mod(123456,654321,789))
-# print(lpowmod(3,12,11))
-# print(time(exp_base(123456,654321,789)))
-# print(time(exp_mod(123456,654321,789)))
-#print(lpowmod(123456,654321,789))
