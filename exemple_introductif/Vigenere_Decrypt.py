@@ -132,6 +132,7 @@ longueur = longueur_cle(texte_maj)
 if longueur == 0:
     print("La longueur de la clé n'a pas pu être déterminée")
 else:
+    print("texte chiffré :", texte)
     print("Longueur probable de la clé :", longueur)
     cle = cle_probable(texte_maj, longueur)
     print("Clé probable :", cle)
