@@ -34,4 +34,11 @@ def chiffrer(message, cle):
     print(crypted)
     return
 
-chiffrer("je suis un message", "secret")
+def main():
+    chiffrer("je suis un message", "secret")
+    quitter = input("Voulez-vous quitter ? (oui/non) : ")
+    if quitter.lower() != 'oui':
+        main()
+
+
+main()

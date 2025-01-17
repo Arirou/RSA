@@ -28,7 +28,7 @@ def dechiffrer(texte_chiffre, permutation):
 
 
 # Exemple d'utilisation
-if __name__ == "__main__":
+def main():
     texte = "bonjour monde"
     permutation = [2, 0, 3, 1]  # Exemple de permutation pour des blocs de taille 4
 
@@ -39,3 +39,10 @@ if __name__ == "__main__":
 
     texte_dechiffre = dechiffrer(texte_chiffre, permutation)
     print("Texte déchiffré:", texte_dechiffre)
+
+    quitter = input("Voulez-vous quitter ? (oui/non) : ")
+    if quitter.lower() != 'oui':
+        main()
+
+
+main()

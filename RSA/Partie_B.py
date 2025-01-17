@@ -1,4 +1,5 @@
-from RSA.Partie_A import exp_mod
+
+from Partie_A import exp_mod
 from math import sqrt
 
 def prim(n):

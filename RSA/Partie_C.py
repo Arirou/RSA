@@ -1,8 +1,9 @@
 
-from RSA.Partie_B import liste_pseudos_premiers, nb_eluer
-from random import choice,randint
-from RSA.Partie_A import  lpowmod
 
+from Partie_B import liste_pseudos_premiers, nb_eluer
+from random import choice,randint
+
+from Partie_A import  lpowmod
 # Clef publique
 def pgcd(a, b):
     while b > 0:
